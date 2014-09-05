@@ -17,7 +17,7 @@ static void* Circle_ctor (void * _self, va_list *app)
 {
 	struct Circle *self =
 			((const struct Class *)Point)->ctor(_self, app);
-	self->rad = va_arg(app, int);
+	self->rad = va_arg(*app, int);
 	return self;
 }
 
